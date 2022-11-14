@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Mr.WaffleLover</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>26700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>320</width>
+        <height>180</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="WebStorage" sid="1510269620771624">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Sky" sid="7434836398419257">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9917029519054382" speed="5">
+                    <frame duration="1" hotspotX="0.50193" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\Sky.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Grass" sid="4859923704558123">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="7691019337082003">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\Grass.png" />
+        </object-type>
+        <object-type name="WaffleLover" sid="5617922913545501">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="9938101229190691">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="8429252871719663">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="5030487572687804">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="8042014625342588" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite Walk 1.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="378424866553598" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite Walk 1.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite Walk 2.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.521739">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite Walk 2.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="1497547964535035" speed="14">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite TNT 1.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite TNT 2.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite TNT 3.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite TNT 4.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite TNT 5.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Eat" pingpong="0" repeatcount="1" repeatto="0" sid="1050593819165486" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite Stand.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite Walk 1.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.649457" y="0" />
+                            <point x="0.652174" y="1" />
+                            <point x="0.301631" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="8810665193162482" speed="1">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Waffle Lover Sprite Drown.png" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.521739" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\WaffleLover Sprite Death.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WaffleCounter" sid="151238192737643">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7969490402905198" speed="5">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Waffle1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WaffleAmount" sid="4515542765234974">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Waffle" sid="5729497885762622">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="716345193893976" speed="1">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Waffle1.png" />
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Waffle2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Thomas" pingpong="0" repeatcount="1" repeatto="0" sid="6703196914047784" speed="5">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Waffle1.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.1875" y="0.8125" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dirt" sid="1073095408689365">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="7464851819327853">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\Dirt.png" />
+        </object-type>
+        <object-type name="IronBlock" sid="6055499329652267">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1848816632630777">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground" sid="7824003538197714">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite" sid="5745778901963047">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9108238058421948" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground2" sid="4590718569924548">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\Grass.png" />
+        </object-type>
+        <object-type name="TiledBackground3" sid="7775893666453405">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\Dirt.png" />
+        </object-type>
+        <object-type name="JumpPad" sid="3461827087410119">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8275022177015638" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\JumpPad.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\JumpPad1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\JumpPad2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\JumpPad3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\JumpPad4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\JumpPad5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ThomasHead" sid="6407858470910056">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="4227207900917398">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4832301336313925" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\Brandon&apos;sQuest\Sprites\Tromas.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.1875" y="0.8125" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ExitTeleporter" sid="590855258317349">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6189346474322662" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EndResults1" sid="8464381329738523">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="EndResults2" sid="6228340622632273">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="MechaEnemy" sid="7957063085690801">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Right" sid="6900247586093445" type="number" />
+                <instance-variable name="Left" sid="9656650157266924" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="165949811287423">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="2348892732993441" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\MechaSprite.png">
+                        <collision-poly>
+                            <point x="0.169643" y="0" />
+                            <point x="0.743304" y="0" />
+                            <point x="0.745536" y="1" />
+                            <point x="0.169643" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Move" pingpong="0" repeatcount="1" repeatto="0" sid="1415018191748582" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Mecha Walk 1.png">
+                        <collision-poly>
+                            <point x="0.169643" y="0" />
+                            <point x="0.743304" y="0" />
+                            <point x="0.745536" y="1" />
+                            <point x="0.169643" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Mecha Walk 2.png">
+                        <collision-poly>
+                            <point x="0.169643" y="0" />
+                            <point x="0.743304" y="0" />
+                            <point x="0.745536" y="1" />
+                            <point x="0.169643" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="4887140319600778" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Mecha Death 1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Mecha Death 2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bbrod_000\Desktop\Games\MrWaffleLover\Sprites\Mecha Death 3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyTrigger1" sid="292206558114317">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9800046741432648" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DeathArea" sid="9965874794439763">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3942258520331261" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DisabledPlatform" sid="3922948682708918">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="911123133599466">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="7394533249198213">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="EnemyTrigger2" sid="2016455475730433">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="69078211423303" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox" sid="8702697466987646">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Button" sid="7492412855577399">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="JustText" sid="5217393878472981">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Level1.xml</layout>
+        <layout>Level2.xml</layout>
+        <layout>CheatCode.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Level1Events.xml</event-sheet>
+        <event-sheet>Controls.xml</event-sheet>
+        <event-sheet>HUD.xml</event-sheet>
+        <event-sheet>EndResults.xml</event-sheet>
+        <event-sheet>Level2Events.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="WebStorage" uid="1" />
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="SHC 2014_ THOMAS WAS EVERYWHERE [Sonic the Very Useful Engine music].m4a" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

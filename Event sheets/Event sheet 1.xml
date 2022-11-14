@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="9263681224483223">
+            <conditions>
+                <condition id="0" name="Compare text" sid="705666006876081" type="TextBox">
+                    <param id="0" name="Text">&quot;WaffleLover The Very Useful Engine&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="5084121265162116" type="System">
+                    <param id="0" name="Group name">&quot;Thomas&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6930766109325046">
+            <conditions>
+                <condition id="0" name="Compare text" sid="9385323442009026" type="TextBox">
+                    <param id="0" name="Text">&quot;Make me a god&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="908705872849569" type="System">
+                    <param id="0" name="Group name">&quot;DebugMode&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="8870791471939894" type="System">
+                    <param id="0" name="Group name">&quot;Enemy&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5932514607259383">
+            <conditions>
+                <condition id="0" name="On clicked" sid="2074440144761321" type="Button" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="557102356113037" type="System">
+                    <param id="0" name="Layout">Level1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

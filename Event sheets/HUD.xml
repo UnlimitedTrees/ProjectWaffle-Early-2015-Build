@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HUD</name>
+    <events>
+        <event-block sid="6303511178351872">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1657957005481533" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5149274515806648" type="WaffleAmount">
+                    <param id="0" name="Text">&quot;: &quot; &amp; Waffles</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

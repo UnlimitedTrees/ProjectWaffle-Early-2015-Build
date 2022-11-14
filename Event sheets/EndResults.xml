@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EndResults</name>
+    <events>
+        <event-block sid="1936777478780979">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9085887740618187" type="WaffleLover">
+                    <param id="0" name="Object">ExitTeleporter</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="7643913109165655" type="EndResults1">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="4905230921439265" type="EndResults2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="0" name="Set text" sid="2219954958375706" type="EndResults2">
+                    <param id="0" name="Text">&quot;Waffles: &quot; &amp; Waffles</param>
+                </action>
+                <action id="-16" name="Wait" sid="5494369897364398" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="6413068620917866" type="System">
+                    <param id="0" name="Variable">Waffles</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set text" sid="4806725858122427" type="EndResults2">
+                    <param id="0" name="Text">&quot;Waffles: &quot; &amp; Waffles</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

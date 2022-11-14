@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Controls</name>
+    <events>
+        <variable constant="0" name="Waffles" sid="213591430016909" static="0" type="number">0</variable>
+        <event-block sid="1151234579946089">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7691970156049327" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3387642010816353" type="WaffleLover">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="4791486084122692" type="WaffleLover">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="7063102285570009" type="WaffleLover">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2778242828215201">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3462616773237675" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="9258442031403626" type="WaffleLover">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7572429691944725" type="WaffleLover">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="8471424907119446" type="WaffleLover">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1956982971533009">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3150775026498356" type="Keyboard">
+                    <param id="0" name="Key">74</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2293217076045864" type="WaffleLover">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8757785868359858">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="763467201307172" type="WaffleLover" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7045156283856744" type="WaffleLover">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6303975720440612">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="2492832298595876" type="WaffleLover" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9555333525022301" type="WaffleLover">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="949705880148894">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4112206699111464" type="WaffleLover">
+                    <param id="0" name="Object">Waffle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6993942069462494" type="WaffleLover">
+                    <param id="0" name="Animation">&quot;Eat&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="1501104413368649" type="Waffle" />
+                <action id="-10" name="Add to" sid="1840820471175487" type="System">
+                    <param id="0" name="Variable">Waffles</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="8566867301006392" title="Enemy">
+            <sub-events>
+                <event-block sid="5729520979308558">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2756524646914986" type="WaffleLover">
+                            <param id="0" name="Object">MechaEnemy</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1342601479705894">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="6462848226327976" type="WaffleLover" />
+                                <condition id="-2" name="Compare Y" sid="381152849898261" type="WaffleLover">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">MechaEnemy.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="5813656571961664" type="WaffleLover">
+                                    <param id="0" name="Vector Y">-700</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6997390379397092" type="MechaEnemy">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4504334903385143" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="3909157920809096" type="MechaEnemy" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9242042037189056">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2526069943614603" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="3892345948703273" type="WaffleLover">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="8980119932969529" type="WaffleLover">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2807170357512427" type="WaffleLover">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6067869673317122" type="System">
+                                    <param id="0" name="Seconds">4.0</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="4752776399549783" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6775210486720512">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7814678315762179" type="WaffleLover">
+                    <param id="0" name="Object">JumpPad</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="9647106647203547" type="WaffleLover">
+                    <param id="0" name="Vector Y">-3000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9547569186596631">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4833488332949715" type="WaffleLover">
+                    <param id="0" name="Object">DeathArea</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="8428355559034568" type="WaffleLover">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="8459572443230183" type="WaffleLover">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="1700677722526852" type="WaffleLover">
+                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="203889419666875" type="System">
+                    <param id="0" name="Seconds">4.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="2063073983811162" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="4122966290441216">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2980572325211226" type="WaffleLover">
+                    <param id="0" name="Object">EnemyTrigger1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="320742607487206" type="MechaEnemy">
+                    <param id="0" name="Instance variable">Left</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5251033899606851">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5657943747646565" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3336358377619949">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6342844046922314" type="MechaEnemy">
+                            <param id="0" name="Instance variable">Left</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4654119261232438" type="MechaEnemy">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1936916041953398" type="MechaEnemy">
+                            <param id="0" name="Animation">&quot;Move&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="9864830879175284" type="MechaEnemy">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="945351126098229">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6296642924046764" type="MechaEnemy">
+                            <param id="0" name="Instance variable">Right</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="2198120245336785" type="MechaEnemy">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4398294621048474" type="MechaEnemy">
+                            <param id="0" name="Animation">&quot;Move&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="505128109025807">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1326841963504497" type="MechaEnemy">
+                    <param id="0" name="Object">EnemyTrigger1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="7436434744940559" type="MechaEnemy">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9915733824000453">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="1370145893144523" type="WaffleLover" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="104655257828864" type="WaffleLover">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4858509093294337">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2154587784037839" type="WaffleLover">
+                    <param id="0" name="Object">DisabledPlatform</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="4790210780415698" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Jumpthru" id="0" name="Set enabled" sid="8490134560979745" type="DisabledPlatform">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="7419512834989415" type="DisabledPlatform">
+                    <param id="0" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9079966309030326">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2612542333365203" type="MechaEnemy">
+                    <param id="0" name="Object">DisabledPlatform</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="7083798750560899" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Jumpthru" id="0" name="Set enabled" sid="548642693424939" type="DisabledPlatform">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="5655760351279506" type="DisabledPlatform">
+                    <param id="0" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9765952968352925">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2850744539437035" type="WaffleLover">
+                    <param id="0" name="Object">EnemyTrigger2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2900861664795599" type="MechaEnemy">
+                    <param id="0" name="Instance variable">Right</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="9832280614138058" title="Thomas">
+            <sub-events>
+                <event-block sid="7837099289239702">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="9085273917616866" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8529094464662958" type="ThomasHead">
+                            <param id="0" name="Pin to">WaffleLover</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="7523777913209888" type="ThomasHead">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="8716784466306172" type="Audio">
+                            <param id="0" name="Folder">1</param>
+                            <param id="1" name="Audio file name">&quot;SHC 2014_ THOMAS WAS EVERYWHERE [Sonic the Very Useful Engine music]&quot;</param>
+                            <param id="3" name="Loop">1</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5806571262514698" type="Waffle">
+                            <param id="0" name="Animation">&quot;Thomas&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6557220905622094" type="EndResults1">
+                            <param id="0" name="Text">&quot;Thomas Passed The Level&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="943564961624291" title="DebugMode">
+            <sub-events>
+                <event-block sid="6021982303777683">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="4988826637699859" type="Keyboard">
+                            <param id="0" name="Key">49</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8787198381722732" type="System">
+                            <param id="0" name="Object to create">Waffle</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9288079718732173">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="2989127662479567" type="Keyboard">
+                            <param id="0" name="Key">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4848848975418802" type="System">
+                            <param id="0" name="Object to create">DisabledPlatform</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4372395011788082">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="2410520832709203" type="Keyboard">
+                            <param id="0" name="Key">51</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7326378657534505" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9525701243362499">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="4087859499531756" type="Keyboard">
+                            <param id="0" name="Key">52</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2960301251047331" type="System">
+                            <param id="0" name="Object to create">ExitTeleporter</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2094304185617034">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="5922469437742381" type="Keyboard">
+                            <param id="0" name="Key">53</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7599152427388236" type="System">
+                            <param id="0" name="Object to create">WaffleLover</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6178014108175954">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1741437193571248" type="Keyboard">
+                            <param id="0" name="Key">54</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="2376927798829964" type="System">
+                            <param id="0" name="Object to create">MechaEnemy</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6225303652349166">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="3172144259718479" type="Keyboard">
+                            <param id="0" name="Key">55</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="9751313378526265" type="System">
+                            <param id="0" name="Object to create">JumpPad</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9929734941686718">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="3992567653929038" type="Keyboard">
+                            <param id="0" name="Key">56</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="750717517971937" type="System">
+                            <param id="0" name="Object to create">ThomasHead</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="572323023313922">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6233500388741824" type="Keyboard">
+                            <param id="0" name="Key">57</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5694184752649348" type="System">
+                            <param id="0" name="Object to create">TiledBackground2</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="463010571227397">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1288868802213437" type="Keyboard">
+                            <param id="0" name="Key">48</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5601170646771375" type="System">
+                            <param id="0" name="Object to create">TiledBackground3</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">WaffleLover.X</param>
+                            <param id="3" name="Y">WaffleLover.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
